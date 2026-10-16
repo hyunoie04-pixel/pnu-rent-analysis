@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>부산대 자취 통학 비교</title>
+<style>
+:root{--bg:#f4f1ec;--card:#fcfcfb;--ink:#1c1a17;--ink2:#58554e;--line:#d9d4c8;--accent:#0f766e}
+@media(prefers-color-scheme:dark){:root{--bg:#121211;--card:#1a1a19;--ink:#f0efec;--ink2:#c3c2b7;--line:#34332f;--accent:#4fb3a9}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "Noto Sans KR","Malgun Gothic",system-ui,sans-serif}
+.w{max-width:880px;margin:0 auto;padding:56px 16px}
+h1{font-size:clamp(30px,6vw,48px);line-height:1.15;margin:0 0 10px;letter-spacing:-.02em}
+p.s{color:var(--ink2);margin:0 0 32px}
+a.c{display:block;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 22px;margin:14px 0;color:inherit;text-decoration:none}
+a.c:hover,a.c:focus-visible{border-color:var(--accent)}
+a.c b{font-size:19px}a.c span{display:block;color:var(--ink2);font-size:14.5px;margin-top:4px}
+small{color:var(--ink2);display:block;margin-top:36px}
+</style></head><body><div class="w">
+<h1>부산대 앞에서 자취할까, 통학할까</h1>
+<p class="s">정문 · 북문 · 부산대역 월세와 부산 전역 통학비용 분석 · 부산대학교 국어국문학과 · 데이터분석 수업 · 2026.10.16</p>
+<a class="c" href="slides/"><b>발표 슬라이드 (초안)</b><span>방향키/스와이프로 넘기기 · 12장 + 부록 · E 키로 글자 편집</span></a>
+<a class="c" href="dashboard/"><b>분석 대시보드</b><span>이율·등교일·시간가치를 바꿔 보는 인터랙티브 보고서</span></a>
+<a class="c" href="notebook/"><b>주피터 노트북 (HTML)</b><span>분석 과정 전체: 표, seaborn/matplotlib 그래프, 통계 검정, 모델</span></a>
+<a class="c" href="notebook/analysis.ipynb"><b>노트북 파일 (.ipynb)</b><span>내려받아 직접 실행/수정</span></a>
+<small>데이터: 국토교통부 전월세 실거래가(공공데이터포털), 다방·직방·피터팬 매물 호가 스냅샷. 통학 시간은 직선거리 기반 추정이며 가정과 한계는 각 문서에 명시했습니다.</small>
+</div></body></html>
