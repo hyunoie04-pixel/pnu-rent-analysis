@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>부산대 자취 통학 비교</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
 <style>
 /* === FIXED 16:9 STAGE BASE (frontend-slides viewport-base.css, 전문 포함) === */
@@ -143,168 +143,200 @@ svg {
     }
 }
 
-/* === 테마 / 컴포넌트 (slides/design_spec.md) === */
+/* === Tesla 스타일 테마 / 컴포넌트 (DESIGN.md) === */
 
-:root{--slide-bg:#f4f1ec;--stage-bg:#17150f;--ink:#1c1a17;--ink2:#58554e;--line:#d9d4c8;--accent:#0f766e;--card:#fcfcfb;
-  --font:'Noto Sans KR','Malgun Gothic',sans-serif;--num:'Fraunces','Noto Serif KR',serif;--ease:cubic-bezier(.16,1,.3,1)}
+:root{--slide-bg:#fff;--stage-bg:#171A20;--ink:#171A20;--ink2:#393C41;--mut:#5C5E62;--line:#EEEEEE;--ash:#F4F4F4;--blue:#3E6AE1;
+  --font:'IBM Plex Sans KR','Noto Sans KR','Malgun Gothic',-apple-system,Arial,sans-serif;--t:.33s}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:var(--font);color:var(--ink)}
-.slide{padding:96px 120px 90px;color:var(--ink)}
-.slide.dark{--slide-bg:#14201f;--ink:#f1efe9;--ink2:#b9c4c0;--line:#2c3f3d;--card:#1c2e2c;background:var(--slide-bg)}
-.kicker{font-size:30px;font-weight:700;color:var(--accent);letter-spacing:.02em;margin-bottom:22px}
-.dark .kicker{color:#5ec4b8}
-h1{font-size:128px;line-height:1.08;font-weight:900;letter-spacing:-.03em}
-h2{font-size:62px;line-height:1.22;font-weight:800;letter-spacing:-.02em;max-width:1680px;margin-bottom:40px;text-wrap:balance;word-break:keep-all}
-h2.tight{margin-bottom:18px}
-h2 em,.concl em{font-style:normal;color:var(--accent)}
-.dark h2 em{color:#5ec4b8}
-.lede{font-size:42px;line-height:1.5;color:var(--ink2);margin-top:44px}
-.slide>.meta{position:absolute;left:120px;bottom:84px;font-size:30px;color:var(--ink2)}
-.side{display:grid;grid-template-columns:1260px 1fr;gap:40px;align-items:start}
-.side .cap{margin-top:70px}
-.cover{display:flex;flex-direction:column;justify-content:center}
-.cover .big2{font-size:84px;max-width:1500px}
-.blob{position:absolute;border-radius:50%;filter:blur(2px);z-index:0;opacity:.9}
-.b1{width:560px;height:560px;right:-120px;top:-120px;background:radial-gradient(circle at 35% 35%,#7ad0c7,#0f766e)}
-.b2{width:300px;height:300px;right:240px;bottom:-110px;background:#f0c8a0}
-.slide>*:not(.blob){position:relative;z-index:1}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:stretch}
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:40px}
-.qcard,.tile,.note{background:var(--card);border:2px solid var(--line);border-radius:36px;padding:48px 52px}
-.qcard{display:flex;gap:30px;align-items:center;font-size:44px;line-height:1.4}
-.qn{font-family:var(--num);font-size:110px;font-weight:700;color:var(--accent);line-height:1}
-.qcard b,.tile b,.note b,.cap b{color:var(--accent)}
-.dark .tile b,.dark .cap b{color:#5ec4b8}
-.bento{display:grid;grid-template-columns:1fr 1fr;gap:32px}
-.bento .wide{grid-column:1/3;font-size:38px;line-height:1.5}
-.tile .big{font-family:var(--num);font-size:150px;font-weight:700;line-height:1;letter-spacing:-.03em}
-.tile .big small{font-family:var(--font);font-size:40px;font-weight:600;color:var(--ink2);margin-left:10px;letter-spacing:0}
-.tile p{font-size:32px;line-height:1.5;color:var(--ink2);margin-top:20px}
-.two.small .note,.two.small .tile{font-size:34px;line-height:1.55}
-.formula{font-size:50px;font-weight:700;background:var(--card);border:2px solid var(--accent);border-radius:36px;padding:44px 52px;margin-bottom:36px;line-height:1.45}
-.formula span{color:var(--accent)}
-.note{font-size:34px;line-height:1.55}
-.chart{margin-top:6px}
-.mini{font-size:26px;color:var(--ink2);margin-bottom:12px;font-weight:600}
-.a-h{transform-box:fill-box;transform-origin:left center}.a-v{transform-box:fill-box;transform-origin:center bottom}
+body{font-family:var(--font);color:var(--ink);font-weight:400}
+.slide{padding:150px 140px 120px;color:var(--ink);background:#fff}
+.slide.dark{--ink:#fff;--ink2:#EEEEEE;--mut:#D0D1D2;background:#171A20;color:#fff}
+.slide>*:not(.bgbox){position:relative;z-index:2}
+.nav{position:absolute!important;left:0;right:0;top:0;height:110px;padding:0 140px;display:flex;justify-content:space-between;align-items:center;font-size:24px;font-weight:500;z-index:5}
+.nav .wm{letter-spacing:.34em}.nav .sec{font-weight:400;color:var(--mut)}
+.dark .nav .sec{color:#EEEEEE}
+h1{font-size:104px;line-height:1.16;font-weight:500;letter-spacing:normal}
+h2{font-size:68px;line-height:1.22;font-weight:500;letter-spacing:normal;margin-bottom:56px;max-width:1640px;text-wrap:balance;word-break:keep-all}
+h2.center{text-align:center;margin-left:auto;margin-right:auto}h2.tight{margin-bottom:22px}
+.blue{color:var(--blue)}
+.sub{font-size:38px;line-height:1.5;font-weight:400}
+.tag{font-size:26px;font-weight:500;color:var(--mut);margin-bottom:14px}
+/* 히어로: 사진이 감정을 담당. 오버레이 그라데이션 없음 -> 어두운 사진 + 카본 단색 폴백 */
+.bgbox{position:absolute!important;inset:0;z-index:0;background:#171A20;overflow:hidden}
+.bgbox .bg{width:100%;height:100%;object-fit:cover;display:block;max-width:none;max-height:none}
+.hero .bgbox::after{content:"";position:absolute;inset:0;background:rgba(23,26,32,.34)}.hero.cover .bgbox::after{background:rgba(23,26,32,.22)}
+.card.imgcard .bgbox::after{content:"";position:absolute;inset:0;background:rgba(23,26,32,.32)}
+.slot{display:none}
+body.editing .noimg .slot,body.editing .bgbox .slot{display:block;position:absolute;left:24px;bottom:20px;font-size:20px;color:#8E8E8E;z-index:3}
+.hero .herotxt{position:absolute!important;left:0;right:0;text-align:center;padding:0 200px}
+.hero.cover .herotxt{top:250px}.hero .herotxt.mid{top:200px}
+.hero h1,.hero h2{color:#fff;margin-bottom:34px;margin-left:auto;margin-right:auto}
+.hero .sub{color:#fff;max-width:1400px;margin:0 auto}
+.herofoot{position:absolute!important;left:0;right:0;bottom:130px;text-align:center;font-size:30px;font-weight:500;color:#fff}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin:56px 0 52px}
+.trio .big{color:#fff}.cap1{font-size:32px;font-weight:500}
+.hero .cap1{color:#fff}
+.concl{list-style:none;display:grid;gap:22px;max-width:1500px;margin:44px auto 0;text-align:left}
+.concl li{font-size:38px;line-height:1.45;padding:22px 0;border-top:2px solid rgba(255,255,255,.55)}
+/* 본문 */
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.cols2.small{gap:80px;margin-top:20px}.cols2.panels{gap:40px}
+.big{font-size:170px;line-height:1;font-weight:500;letter-spacing:normal}
+.big small{font-size:44px;font-weight:400;color:var(--mut);margin-left:12px}
+.cap1{margin-top:20px}
+.note{font-size:34px;line-height:1.55;color:var(--ink2);margin-top:14px}
+.note b,.line b{font-weight:500;color:var(--blue)}
+.mut2{font-size:26px;color:var(--mut)}
+.line{font-size:42px;line-height:1.5;margin-top:70px;color:var(--ink2)}.line.center{text-align:center}
+.formula{font-size:60px;line-height:1.5;font-weight:500;background:var(--ash);border-radius:12px;padding:56px 70px;margin-bottom:40px}
+.formula span{color:var(--blue)}
+.cap{font-size:32px;line-height:1.55;color:var(--mut);margin-top:30px;max-width:1640px}
 .chart svg{display:block;max-width:none;max-height:none}
-.cap{font-size:30px;color:var(--ink2);margin-top:22px;line-height:1.5;max-width:1560px}
-.sq{display:inline-block;width:22px;height:22px;border-radius:5px;margin:0 8px 0 18px;vertical-align:-3px}
-.tbl{width:100%;border-collapse:collapse;font-size:32px}
-.tbl th,.tbl td{padding:16px 12px;text-align:right;border-bottom:2px solid var(--line)}
-.tbl th:first-child,.tbl td:first-child{text-align:left}.tbl th{color:var(--ink2);font-weight:600}
-.lim,.concl,.src{font-size:44px;line-height:1.5;list-style:none;display:grid;gap:22px;max-width:1560px}
-.lim{counter-reset:n}.lim li{counter-increment:n;padding-left:84px;position:relative}
-.lim li::before{content:counter(n);position:absolute;left:0;top:-2px;font-family:var(--num);font-weight:700;font-size:60px;color:var(--accent)}
-.concl li{padding:22px 34px;background:var(--card);border-radius:28px;border:2px solid var(--line);font-size:38px}
-.src{font-size:34px;gap:14px}
-.refs{position:absolute!important;left:120px;bottom:38px;font-size:22px;color:var(--ink2);z-index:2}
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
-.slide.visible .reveal{opacity:1;transform:none}
-.slide.visible .reveal:nth-child(2){transition-delay:.12s}.slide.visible .reveal:nth-child(3){transition-delay:.24s}.slide.visible .reveal:nth-child(4){transition-delay:.36s}
-.deck-controls{display:flex;gap:14px;align-items:center;background:rgba(20,20,18,.78);color:#f1efe9;border-radius:999px;padding:8px 18px;font:14px var(--font)}
-.deck-controls button{background:none;border:0;color:inherit;font-size:18px;cursor:pointer;padding:2px 8px}
-body.editing [data-edit]{outline:2px dashed #0f766e;outline-offset:6px;cursor:text}
-.edit-hint{position:fixed;top:14px;right:16px;z-index:1000;font:13px var(--font);background:#0f766e;color:#fff;border-radius:999px;padding:6px 14px;display:none}
+.mini{font-size:28px;font-weight:500;color:var(--ink2);margin-bottom:18px}
+.panel{background:var(--ash);border-radius:12px;padding:44px 50px}
+.side{display:grid;grid-template-columns:1260px 1fr;gap:50px;align-items:start}
+.legendcol{font-size:30px;line-height:1.6;padding-top:50px}
+.legendcol p{margin-bottom:22px}.mut{color:var(--mut);font-size:28px}.legendcol b{font-weight:500;color:var(--blue)}
+.sq{display:inline-block;width:22px;height:22px;border-radius:3px;margin-right:12px;vertical-align:-2px}
+.tbl{width:100%;border-collapse:collapse;font-size:34px}
+.tbl th,.tbl td{padding:20px 12px;text-align:right;border-bottom:2px solid var(--line)}
+.tbl th:first-child,.tbl td:first-child{text-align:left}.tbl th{color:var(--mut);font-weight:400}.tbl td{font-weight:500}
+/* 카드: 테두리 없음, 12px, 라벨 좌상단 */
+.cards2{display:grid;grid-template-columns:1fr 1fr;gap:24px;height:700px}
+.cards3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;height:560px}
+.card.imgcard{position:relative;border-radius:12px;overflow:hidden;background:#171A20;color:#fff}
+.card.imgcard .bgbox{border-radius:12px}
+.card .lab{position:absolute!important;left:44px;top:40px;font-size:40px;font-weight:500;z-index:2;color:#fff}
+.card p{position:absolute!important;left:44px;bottom:44px;font-size:46px;line-height:1.4;font-weight:500;z-index:2;color:#fff}
+.noimg.card.imgcard{background:#393C41}
+.lim,.src{list-style:none;display:grid;gap:26px;max-width:1600px;font-size:42px;line-height:1.5}
+.lim{counter-reset:n}.lim li{counter-increment:n;padding-left:90px;position:relative;border-top:2px solid var(--line);padding-top:24px}
+.lim li::before{content:counter(n);position:absolute;left:0;top:18px;font-weight:500;font-size:56px;color:var(--blue)}
+.src{font-size:34px;gap:18px}
+.refs{position:absolute!important;left:140px;bottom:44px;font-size:22px;color:var(--mut);z-index:3}
+.dark .refs{color:#EEEEEE}
+/* 모션: 텍스트는 불투명도만(이동 없음), 데이터는 anime.js */
+.rv{opacity:0;transition:opacity var(--t)}
+.slide.visible .rv{opacity:1}
+.slide.visible .rv:nth-child(2){transition-delay:.1s}.slide.visible .rv:nth-child(3){transition-delay:.2s}.slide.visible .rv:nth-child(4){transition-delay:.3s}
+.a-h{transform-box:fill-box;transform-origin:left center}.a-v{transform-box:fill-box;transform-origin:center bottom}
+/* 컨트롤: 하단 점 인디케이터 + 가장자리 화살표 (카루셀) */
+.dots{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);display:flex;gap:10px;z-index:1000}
+.dots i{width:9px;height:9px;border-radius:50%;background:#8E8E8E;opacity:.55;cursor:pointer;transition:opacity var(--t),background-color var(--t)}
+.dots i.on{background:#3E6AE1;opacity:1}
+.arrow{position:fixed;top:50%;width:48px;height:48px;margin-top:-24px;border:0;border-radius:4px;background:rgba(255,255,255,.75);color:#171A20;font-size:22px;cursor:pointer;z-index:1000;transition:background-color var(--t)}
+.arrow:hover{background:#fff}.arrow.l{left:18px}.arrow.r{right:18px}
+body.editing [data-edit]{outline:2px dashed #3E6AE1;outline-offset:6px;cursor:text}
+.edit-hint{position:fixed;top:14px;right:16px;z-index:1000;font:14px var(--font);background:#3E6AE1;color:#fff;border-radius:4px;padding:6px 14px;display:none}
 body.editing .edit-hint{display:block}
+@media print{.dots,.arrow{display:none}}
 
 </style>
 </head>
 <body>
 <div class="deck-viewport">
 <main class="deck-stage" id="deckStage">
-<section class="slide cover">
-      <div class="kicker reveal">부산대학교 장전캠퍼스 · 주거비 데이터 분석</div>
-      <h1 class="reveal" data-edit>부산대 앞에서<br>자취할까, 통학할까</h1>
-      <p class="lede reveal" data-edit>정문·북문·부산대역 월세와 부산 전역 통학비용을<br>실거래가와 매물 호가로 비교해 봤어요</p>
-      <div class="meta reveal" data-edit>부산대학교 국어국문학과 · 2026.10.16 · 데이터분석 수업</div>
-      <div class="blob b1"></div><div class="blob b2"></div></section>
-<section class="slide "><!-- 발표 메모: 설문 없이 공공데이터와 매물 데이터만 사용했음을 먼저 밝힌다. -->
-      <div class="kicker">문제 제기</div>
-      <h2 data-edit>통학생이 궁금한 두 가지</h2>
-      <div class="two">
-        <div class="qcard reveal"><div class="qn">1</div><p data-edit>정문 · 북문 · 부산대역 중<br><b>어디가 가장 저렴</b>할까?</p></div>
-        <div class="qcard reveal"><div class="qn">2</div><p data-edit>부산 어디까지는 통학이,<br><b>어디부터는 자취</b>가 이득일까?</p></div>
+<section class="slide hero cover dark"><div class="nav"><span class="wm">PNU RENT</span><span class="sec">부산대 주거비 분석</span></div>
+      <div class="bgbox"><img class="bg" src="assets/img/01_cover.jpg" alt="부산대 장전캠퍼스 앞 저녁 거리" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/01_cover.jpg</span></div>
+      <div class="herotxt">
+        <h1 class="rv" data-edit>부산대 앞에서<br>자취할까, 통학할까</h1>
+        <p class="sub rv" data-edit>정문 · 북문 · 부산대역 월세와 부산 전역 통학비용을<br>실거래가와 매물 호가로 비교했어요</p>
+      </div>
+      <div class="herofoot rv" data-edit>부산대학교 국어국문학과 · 2026.10.16 · 데이터분석</div></section>
+<section class="slide "><!-- 발표 메모: 설문 없이 공공데이터와 매물 데이터만 사용했음을 먼저 밝힌다. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">문제 제기</span></div>
+      <h2 class="center rv" data-edit>통학생이 궁금한 두 가지</h2>
+      <div class="cards2">
+        <div class="card imgcard rv"><div class="bgbox"><img class="bg" src="assets/img/02_card_home.jpg" alt="자취방 창가" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/02_card_home.jpg</span></div><div class="lab">자취</div><p data-edit>정문 · 북문 · 부산대역<br>어디가 가장 저렴할까?</p></div>
+        <div class="card imgcard rv"><div class="bgbox"><img class="bg" src="assets/img/02_card_commute.jpg" alt="아침 통학 지하철" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/02_card_commute.jpg</span></div><div class="lab">통학</div><p data-edit>부산 어디까지는 통학이,<br>어디부터는 자취가 이득일까?</p></div>
       </div></section>
-<section class="slide "><!-- 발표 메모: 크롤링은 플랫폼 약관 확인이 필요하다는 점을 한 마디 언급. -->
-      <div class="kicker">데이터</div>
-      <h2 data-edit>호가 438건 + 실거래 123,676건을 함께 봤어요</h2>
-      <div class="bento">
-        <div class="tile reveal"><div class="big">356<small>건</small></div>
-          <p>매물 호가 (중복 제거)<br>다방 107 · 직방 109 · 피터팬 222에서 수집, 플랫폼 간 중복 34쌍 제거</p></div>
-        <div class="tile reveal"><div class="big">123,676<small>건</small></div>
-          <p>국토부 전월세 실거래가<br>부산 16개 구군 · 전용 33㎡ 이하<br>2023.01 ~ 2026.10</p></div>
-        <div class="tile wide reveal"><p><b>호가</b>는 현재 시장이 <b>요구하는</b> 가격, <b>실거래</b>는 실제 <b>체결된</b> 가격입니다. 두 자료를 겹쳐 봐야 서로의 약점을 보완합니다.</p></div>
-      </div><div class="refs">[R-01] 국토교통부 전월세 실거래가</div></section>
-<section class="slide "><!-- 발표 메모: 이율 값은 기준금리 보도가 엇갈려 구간으로 제시한다. -->
-      <div class="kicker">방법</div>
-      <h2 data-edit>월세만 보면 놓치는 것: 보증금과 관리비</h2>
-      <div class="formula reveal" data-edit><span>월 실질 주거비</span> = 월세 + 보증금 × 연 5.5% ÷ 12 + 관리비</div>
-      <div class="two small">
-        <div class="note reveal"><b>권역</b> — 정문 · 북문 · 부산대역 중 가장 가까운 곳에서 반경 700m 이내. 그 밖은 '기타'.</div>
-        <div class="note reveal"><b>이율 민감도</b> — 4.5% / 5.5% / 7.0%로 바꿔도 결론이 유지되는지 확인.</div>
+<section class="slide "><!-- 발표 메모: 크롤링은 플랫폼 약관 확인이 필요하다는 점을 한 마디 언급. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">데이터</span></div>
+      <h2 class="rv" data-edit>호가와 실거래, 두 가지 데이터를 겹쳐 봤어요</h2>
+      <div class="cols2">
+        <div class="rv"><div class="big">356<small>건</small></div><div class="cap1">매물 호가 (중복 제거)</div><p class="note">다방 107 · 직방 109 · 피터팬 222, 플랫폼 간 중복 34쌍 제거</p></div>
+        <div class="rv"><div class="big">123,676<small>건</small></div><div class="cap1">국토부 전월세 실거래가</div><p class="note">부산 16개 구군 · 전용 33㎡ 이하 · 2023.01 ~ 2026.10</p></div>
+      </div>
+      <p class="line rv" data-edit>호가는 시장이 <b>요구하는</b> 가격, 실거래는 실제로 <b>체결된</b> 가격이에요.</p><div class="refs">[R-01] 국토교통부 전월세 실거래가</div></section>
+<section class="slide "><!-- 발표 메모: 이율 값은 기준금리 보도가 엇갈려 구간으로 제시한다. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">방법</span></div>
+      <h2 class="rv" data-edit>월세만 보면 놓치는 것</h2>
+      <div class="formula rv" data-edit><span>월 실질 주거비</span><br>= 월세 + 보증금 × 연 5.5% ÷ 12 + 관리비</div>
+      <div class="cols2 small">
+        <p class="note rv" data-edit><b>권역</b>은 정문 · 북문 · 부산대역 중 가장 가까운 곳에서 반경 700m 이내예요.</p>
+        <p class="note rv" data-edit><b>이율</b>은 4.5% / 5.5% / 7.0%로 바꿔 보며 결론이 변하는지 확인했어요.</p>
       </div><div class="refs">[R-02] 한국은행 기준금리</div></section>
-<section class="slide "><!-- 발표 메모: 신뢰구간이 겹치는 구간이 있음을 짚고 다음 장으로. -->
-      <div class="kicker">결과 1 · 권역별 월세</div>
-      <h2 data-edit>월세는 <em>정문</em>이 제일 쌌어요 (월 37.4만원)</h2>
-      <div class="chart reveal"><svg viewBox="0 0 1400 362" width="1400" height="362" role="img"><text x="172" y="49.040000000000006" text-anchor="end" font-size="38" fill="var(--ink)">정문</text><rect class="a-h" x="190" y="6" width="666.3" height="66.08000000000001" rx="8" fill="#2a78d6"/><line x1="846.7" x2="909.8" y1="39.040000000000006" y2="39.040000000000006" stroke="var(--ink)" stroke-width="3"/><line x1="846.7" x2="846.7" y1="29.040000000000006" y2="49.040000000000006" stroke="var(--ink)" stroke-width="3"/><line x1="909.8" x2="909.8" y1="29.040000000000006" y2="49.040000000000006" stroke="var(--ink)" stroke-width="3"/><text x="925.8" y="49.040000000000006" font-size="38" font-weight="700" fill="var(--ink)">37.4만<tspan font-weight="400" fill="var(--ink2)" font-size="32"> n=29</tspan></text><text x="172" y="167.04000000000002" text-anchor="end" font-size="38" fill="var(--ink)">북문</text><rect class="a-h" x="190" y="124" width="691.2" height="66.08000000000001" rx="8" fill="#eb6834"/><line x1="854.9" x2="910.6" y1="157.04000000000002" y2="157.04000000000002" stroke="var(--ink)" stroke-width="3"/><line x1="854.9" x2="854.9" y1="147.04000000000002" y2="167.04000000000002" stroke="var(--ink)" stroke-width="3"/><line x1="910.6" x2="910.6" y1="147.04000000000002" y2="167.04000000000002" stroke="var(--ink)" stroke-width="3"/><text x="926.6" y="167.04000000000002" font-size="38" font-weight="700" fill="var(--ink)">38.8만<tspan font-weight="400" fill="var(--ink2)" font-size="32"> n=118</tspan></text><text x="172" y="285.04" text-anchor="end" font-size="38" fill="var(--ink)">부산대역</text><rect class="a-h" x="190" y="242" width="762.9" height="66.08000000000001" rx="8" fill="#1baf7a"/><line x1="873.4" x2="1020.5" y1="275.04" y2="275.04" stroke="var(--ink)" stroke-width="3"/><line x1="873.4" x2="873.4" y1="265.04" y2="285.04" stroke="var(--ink)" stroke-width="3"/><line x1="1020.5" x2="1020.5" y1="265.04" y2="285.04" stroke="var(--ink)" stroke-width="3"/><text x="1036.5" y="285.04" font-size="38" font-weight="700" fill="var(--ink)">42.8만<tspan font-weight="400" fill="var(--ink2)" font-size="32"> n=84</tspan></text></svg></div>
-      <p class="cap">월 실질 주거비 중위값(만원), 선 = 95% 신뢰구간. 가장 비싼 부산대역과의 격차는 월 5.4만원.<br>다만 <b>정문과 북문의 차이는 통계적으로 확실하지 않아요</b> (다음 장).</p><div class="refs">[R-01] 매물 호가(다방·직방·피터팬)</div></section>
-<section class="slide "><!-- 발표 메모: p값 해석은 짧게: 0.05 미만만 확실한 차이. -->
-      <div class="kicker">결과 1 · 얼마나 확실한가</div>
-      <h2 data-edit>유의한 차이: 북문 vs 부산대역</h2>
-      <div class="two small">
-        <div class="tile reveal"><table class="tbl"><tr><th>비교</th><th>중위값 차이</th><th>p (Holm)</th></tr>
-          <tr><td>정문 vs 북문</td><td>-1.4만</td><td>0.607</td></tr><tr><td>정문 vs 부산대역</td><td>-5.4만</td><td>0.061</td></tr><tr><td>북문 vs 부산대역</td><td>-4.0만</td><td>0.028</td></tr></table></div>
-        <div class="tile reveal"><div class="big">+1.05<small>만원/㎡</small></div>
-          <p>면적을 1㎡ 늘릴 때 월 주거비 증가 (권역·층·플랫폼 통제). 층당 +1.41만원.<br><b>권역보다 방의 크기·층이 더 크게 좌우합니다.</b></p></div>
+<section class="slide "><div class="nav"><span class="wm">PNU RENT</span><span class="sec">권역</span></div>
+      <h2 class="center rv" data-edit>부산대 앞 세 곳을 비교했어요</h2>
+      <div class="cards3">
+        <div class="card imgcard rv"><div class="bgbox"><img class="bg" src="assets/img/05_gate_front.jpg" alt="정문 일대" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/05_gate_front.jpg</span></div><div class="lab">정문</div></div>
+        <div class="card imgcard rv"><div class="bgbox"><img class="bg" src="assets/img/05_gate_north.jpg" alt="북문 일대" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/05_gate_north.jpg</span></div><div class="lab">북문</div></div>
+        <div class="card imgcard rv"><div class="bgbox"><img class="bg" src="assets/img/05_station.jpg" alt="부산대역 일대" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/05_station.jpg</span></div><div class="lab">부산대역</div></div>
+      </div>
+      <p class="line center rv" data-edit>각 앵커에서 반경 700m 안의 월세 매물 231건<br><span class="mut2">사진은 분위기를 위한 AI 생성 이미지예요</span></p></section>
+<section class="slide "><!-- 발표 메모: 신뢰구간이 겹치는 구간이 있음을 짚고 다음 장으로. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">결과 1</span></div>
+      <h2 class="rv" data-edit>월세는 <span class="blue">정문</span>이 제일 쌌어요</h2>
+      <div class="chart rv"><svg viewBox="0 0 1500 368" width="1500" height="368" role="img"><text x="170" y="46.0" text-anchor="end" font-size="40" font-weight="500" fill="#171A20">정문</text><rect class="a-h" x="190" y="6" width="720.7" height="60.0" rx="4" fill="#3E6AE1"/><line x1="900.3" x2="968.6" y1="36.0" y2="36.0" stroke="#171A20" stroke-width="3"/><line x1="900.3" x2="900.3" y1="26.0" y2="46.0" stroke="#171A20" stroke-width="3"/><line x1="968.6" x2="968.6" y1="26.0" y2="46.0" stroke="#171A20" stroke-width="3"/><text x="986.6" y="46.0" font-size="40" font-weight="500" fill="#171A20">37.4만<tspan font-weight="400" fill="#5C5E62" font-size="34"> n=29</tspan></text><text x="170" y="166.0" text-anchor="end" font-size="40" font-weight="400" fill="#171A20">북문</text><rect class="a-h" x="190" y="126" width="747.7" height="60.0" rx="4" fill="#D0D1D2"/><line x1="909.1" x2="969.4" y1="156.0" y2="156.0" stroke="#171A20" stroke-width="3"/><line x1="909.1" x2="909.1" y1="146.0" y2="166.0" stroke="#171A20" stroke-width="3"/><line x1="969.4" x2="969.4" y1="146.0" y2="166.0" stroke="#171A20" stroke-width="3"/><text x="987.4" y="166.0" font-size="40" font-weight="500" fill="#171A20">38.8만<tspan font-weight="400" fill="#5C5E62" font-size="34"> n=118</tspan></text><text x="170" y="286.0" text-anchor="end" font-size="40" font-weight="400" fill="#171A20">부산대역</text><rect class="a-h" x="190" y="246" width="825.2" height="60.0" rx="4" fill="#D0D1D2"/><line x1="929.2" x2="1088.3" y1="276.0" y2="276.0" stroke="#171A20" stroke-width="3"/><line x1="929.2" x2="929.2" y1="266.0" y2="286.0" stroke="#171A20" stroke-width="3"/><line x1="1088.3" x2="1088.3" y1="266.0" y2="286.0" stroke="#171A20" stroke-width="3"/><text x="1106.3" y="286.0" font-size="40" font-weight="500" fill="#171A20">42.8만<tspan font-weight="400" fill="#5C5E62" font-size="34"> n=84</tspan></text></svg></div>
+      <p class="cap rv" data-edit>월 실질 주거비 중위값 37.4만원. 선은 95% 신뢰구간이고 가장 비싼 부산대역과 월 5.4만원 차이예요.<br>다만 정문과 북문의 차이는 통계적으로 확실하지 않아요.</p><div class="refs">[R-01] 매물 호가(다방·직방·피터팬)</div></section>
+<section class="slide "><!-- 발표 메모: p값 해석은 짧게: 0.05 미만만 확실한 차이. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">결과 1</span></div>
+      <h2 class="rv" data-edit>권역 차이보다 방의 크기가 더 커요</h2>
+      <div class="cols2">
+        <div class="rv"><table class="tbl"><tr><th>비교</th><th>중위값 차이</th><th>p (Holm)</th></tr>
+          <tr><td>정문 vs 북문</td><td>-1.4만</td><td>0.607</td></tr><tr><td>정문 vs 부산대역</td><td>-5.4만</td><td>0.061</td></tr><tr><td>북문 vs 부산대역</td><td>-4.0만</td><td>0.028</td></tr></table>
+          <p class="note" style="margin-top:22px">유의한 쌍: 북문 vs 부산대역 (p &lt; 0.05)</p></div>
+        <div class="rv"><div class="big">+1.05<small>만원/㎡</small></div><div class="cap1">면적 1㎡당 월 주거비 증가</div><p class="note">층당 +1.41만원. 권역·층·플랫폼을 통제한 회귀 결과예요.</p></div>
       </div><div class="refs">쌍별 Mann–Whitney, Holm 보정 · HC1 강건 회귀</div></section>
-<section class="slide "><!-- 발표 메모: 거리 구간 사이에 일관된 내리막이 없다는 점이 핵심. -->
-      <div class="kicker">결과 1 · 거리</div>
-      <h2 data-edit>학교와 가깝다고 꼭 비싸진 않았어요</h2>
-      <div class="chart reveal"><svg viewBox="0 0 1100 520" width="1100" height="520" role="img"><line x1="20" x2="1100" y1="430" y2="430" stroke="var(--line)" stroke-width="2"/><rect class="a-v" x="67.5" y="175.0" width="121.0" height="255.0" rx="8" fill="#2a78d6"/><text x="128.0" y="163.0" text-anchor="middle" font-size="28" font-weight="700" fill="var(--ink)">41.8만</text><text x="128.0" y="464" text-anchor="middle" font-size="26" fill="var(--ink)">~300m</text><text x="128.0" y="496" text-anchor="middle" font-size="22" fill="var(--ink2)">n=70</text><rect class="a-v" x="283.5" y="196.1" width="121.0" height="233.9" rx="8" fill="#2a78d6"/><text x="344.0" y="184.1" text-anchor="middle" font-size="28" font-weight="700" fill="var(--ink)">38.4만</text><text x="344.0" y="464" text-anchor="middle" font-size="26" fill="var(--ink)">300~600m</text><text x="344.0" y="496" text-anchor="middle" font-size="22" fill="var(--ink2)">n=155</text><rect class="a-v" x="499.5" y="118.0" width="121.0" height="312.0" rx="8" fill="#2a78d6"/><text x="560.0" y="106.0" text-anchor="middle" font-size="28" font-weight="700" fill="var(--ink)">51.2만</text><text x="560.0" y="464" text-anchor="middle" font-size="26" fill="var(--ink)">600~900m</text><text x="560.0" y="496" text-anchor="middle" font-size="22" fill="var(--ink2)">n=30</text><rect class="a-v" x="715.5" y="177.8" width="121.0" height="252.2" rx="8" fill="#2a78d6"/><text x="776.0" y="165.8" text-anchor="middle" font-size="28" font-weight="700" fill="var(--ink)">41.4만</text><text x="776.0" y="464" text-anchor="middle" font-size="26" fill="var(--ink)">900~1200m</text><text x="776.0" y="496" text-anchor="middle" font-size="22" fill="var(--ink2)">n=29</text><rect class="a-v" x="931.5" y="208.2" width="121.0" height="221.8" rx="8" fill="#2a78d6"/><text x="992.0" y="196.2" text-anchor="middle" font-size="28" font-weight="700" fill="var(--ink)">36.4만</text><text x="992.0" y="464" text-anchor="middle" font-size="26" fill="var(--ink)">1200m+</text><text x="992.0" y="496" text-anchor="middle" font-size="22" fill="var(--ink2)">n=72</text></svg></div>
-      <p class="cap">앵커까지 거리별 월 실질 주거비 중위값. Spearman ρ = -0.05 (p = 0.33).</p><div class="refs">[R-01] 매물 호가</div></section>
-<section class="slide "><!-- 발표 메모: 호가-실거래 구성이 달라 단순 비교는 위험하다는 단서 포함. -->
-      <div class="kicker">결과 2 · 실거래로 확인</div>
-      <h2 data-edit>비슷한 방끼리 비교하면 호가가 실거래보다 평균 13% 낮아요</h2>
-      <div class="two small">
-        <div class="tile reveal"><div class="mini">캠퍼스 인접 동 환산월세 (최근 12개월, 만원)</div><svg viewBox="0 0 760 318" width="760" height="318" role="img"><text x="212" y="33.36" text-anchor="end" font-size="26" fill="var(--ink)">금정 장전동</text><rect class="a-h" x="230" y="6" width="168.1" height="34.720000000000006" rx="8" fill="#2a78d6"/><text x="414.1" y="33.36" font-size="26" font-weight="700" fill="var(--ink)">34.3만<tspan font-weight="400" fill="var(--ink2)" font-size="20"> n=1806</tspan></text><text x="212" y="95.36" text-anchor="end" font-size="26" fill="var(--ink)">금정 구서동</text><rect class="a-h" x="230" y="68" width="202.4" height="34.720000000000006" rx="8" fill="#2a78d6"/><text x="448.4" y="95.36" font-size="26" font-weight="700" fill="var(--ink)">41.3만<tspan font-weight="400" fill="var(--ink2)" font-size="20"> n=184</tspan></text><text x="212" y="157.36" text-anchor="end" font-size="26" fill="var(--ink)">금정 부곡동</text><rect class="a-h" x="230" y="130" width="223.4" height="34.720000000000006" rx="8" fill="#2a78d6"/><text x="469.4" y="157.36" font-size="26" font-weight="700" fill="var(--ink)">45.6만<tspan font-weight="400" fill="var(--ink2)" font-size="20"> n=313</tspan></text><text x="212" y="219.36" text-anchor="end" font-size="26" fill="var(--ink)">금정 서동</text><rect class="a-h" x="230" y="192" width="244.7" height="34.720000000000006" rx="8" fill="#2a78d6"/><text x="490.7" y="219.36" font-size="26" font-weight="700" fill="var(--ink)">49.9만<tspan font-weight="400" fill="var(--ink2)" font-size="20"> n=64</tspan></text><text x="212" y="281.36" text-anchor="end" font-size="26" fill="var(--ink)">동래 명륜동</text><rect class="a-h" x="230" y="254" width="254.2" height="34.720000000000006" rx="8" fill="#2a78d6"/><text x="500.2" y="281.36" font-size="26" font-weight="700" fill="var(--ink)">51.9만<tspan font-weight="400" fill="var(--ink2)" font-size="20"> n=72</tspan></text></svg></div>
-        <div class="tile reveal"><div class="mini">계약가 추이 (반기 중위, 만원)</div><svg viewBox="0 0 760 330" width="760" height="330" role="img"><line x1="70" x2="610" y1="260.0" y2="260.0" stroke="var(--line)" stroke-width="2"/><text x="58" y="269.0" text-anchor="end" font-size="20" fill="var(--ink2)">25</text><line x1="70" x2="610" y1="202.5" y2="202.5" stroke="var(--line)" stroke-width="2"/><text x="58" y="211.5" text-anchor="end" font-size="20" fill="var(--ink2)">30</text><line x1="70" x2="610" y1="145.0" y2="145.0" stroke="var(--line)" stroke-width="2"/><text x="58" y="154.0" text-anchor="end" font-size="20" fill="var(--ink2)">35</text><line x1="70" x2="610" y1="87.5" y2="87.5" stroke="var(--line)" stroke-width="2"/><text x="58" y="96.5" text-anchor="end" font-size="20" fill="var(--ink2)">40</text><line x1="70" x2="610" y1="30.0" y2="30.0" stroke="var(--line)" stroke-width="2"/><text x="58" y="39.0" text-anchor="end" font-size="20" fill="var(--ink2)">45</text><text x="70.0" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">23&#x27;H1</text><text x="147.1" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">23&#x27;H2</text><text x="224.3" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">24&#x27;H1</text><text x="301.4" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">24&#x27;H2</text><text x="378.6" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">25&#x27;H1</text><text x="455.7" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">25&#x27;H2</text><text x="532.9" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">26&#x27;H1</text><text x="610.0" y="300" text-anchor="middle" font-size="20" fill="var(--ink2)">26&#x27;H2</text><polyline class="a-line" points="70.0,129.2 147.1,150.3 224.3,149.8 301.4,141.6 378.6,141.6 455.7,121.5 532.9,149.8 610.0,108.6" fill="none" stroke="#2a78d6" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle class="a-dot" cx="70.0" cy="129.2" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="147.1" cy="150.3" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="224.3" cy="149.8" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="301.4" cy="141.6" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="378.6" cy="141.6" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="455.7" cy="121.5" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="532.9" cy="149.8" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="610.0" cy="108.6" r="9" fill="#2a78d6" stroke="var(--card)" stroke-width="4"/><text x="628.0" y="117.6" font-size="24" font-weight="700" fill="var(--ink)">환산월세 38.2</text><polyline class="a-line" points="70.0,179.5 147.1,202.5 224.3,202.5 301.4,191.0 378.6,202.5 455.7,168.0 532.9,191.0 610.0,156.5" fill="none" stroke="#eb6834" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/><circle class="a-dot" cx="70.0" cy="179.5" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="147.1" cy="202.5" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="224.3" cy="202.5" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="301.4" cy="191.0" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="378.6" cy="202.5" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="455.7" cy="168.0" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="532.9" cy="191.0" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><circle class="a-dot" cx="610.0" cy="156.5" r="9" fill="#eb6834" stroke="var(--card)" stroke-width="4"/><text x="628.0" y="165.5" font-size="24" font-weight="700" fill="var(--ink)">월세 34.0</text></svg></div>
+<section class="slide "><!-- 발표 메모: 호가-실거래 구성이 달라 단순 비교는 위험하다는 단서 포함. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">결과 2</span></div>
+      <h2 class="rv" data-edit>비슷한 방끼리 비교하면 호가가 실거래보다 평균 13% 낮아요</h2>
+      <div class="cols2 panels">
+        <div class="panel rv"><div class="mini">캠퍼스 인접 동 환산월세 (최근 12개월, 만원)</div><svg viewBox="0 0 760 328" width="760" height="328" role="img"><text x="130" y="32.0" text-anchor="end" font-size="28" font-weight="500" fill="#171A20">장전동</text><rect class="a-h" x="150" y="6" width="201.7" height="32.0" rx="4" fill="#3E6AE1"/><text x="369.7" y="32.0" font-size="28" font-weight="500" fill="#171A20">34.3만<tspan font-weight="400" fill="#5C5E62" font-size="22"> n=1806</tspan></text><text x="130" y="96.0" text-anchor="end" font-size="28" font-weight="400" fill="#171A20">구서동</text><rect class="a-h" x="150" y="70" width="242.8" height="32.0" rx="4" fill="#D0D1D2"/><text x="410.8" y="96.0" font-size="28" font-weight="500" fill="#171A20">41.3만<tspan font-weight="400" fill="#5C5E62" font-size="22"> n=184</tspan></text><text x="130" y="160.0" text-anchor="end" font-size="28" font-weight="400" fill="#171A20">부곡동</text><rect class="a-h" x="150" y="134" width="268.1" height="32.0" rx="4" fill="#D0D1D2"/><text x="436.1" y="160.0" font-size="28" font-weight="500" fill="#171A20">45.6만<tspan font-weight="400" fill="#5C5E62" font-size="22"> n=313</tspan></text><text x="130" y="224.0" text-anchor="end" font-size="28" font-weight="400" fill="#171A20">서동</text><rect class="a-h" x="150" y="198" width="293.7" height="32.0" rx="4" fill="#D0D1D2"/><text x="461.7" y="224.0" font-size="28" font-weight="500" fill="#171A20">49.9만<tspan font-weight="400" fill="#5C5E62" font-size="22"> n=64</tspan></text><text x="130" y="288.0" text-anchor="end" font-size="28" font-weight="400" fill="#171A20">명륜동</text><rect class="a-h" x="150" y="262" width="305.1" height="32.0" rx="4" fill="#D0D1D2"/><text x="473.1" y="288.0" font-size="28" font-weight="500" fill="#171A20">51.9만<tspan font-weight="400" fill="#5C5E62" font-size="22"> n=72</tspan></text></svg></div>
+        <div class="panel rv"><div class="mini">계약가 추이 (반기 중위, 만원)</div><svg viewBox="0 0 760 340" width="760" height="340" role="img"><line x1="70" x2="590" y1="270.0" y2="270.0" stroke="#D0D1D2" stroke-width="2"/><text x="58" y="279.0" text-anchor="end" font-size="22" fill="#5C5E62">25</text><line x1="70" x2="590" y1="210.0" y2="210.0" stroke="#D0D1D2" stroke-width="2"/><text x="58" y="219.0" text-anchor="end" font-size="22" fill="#5C5E62">30</text><line x1="70" x2="590" y1="150.0" y2="150.0" stroke="#D0D1D2" stroke-width="2"/><text x="58" y="159.0" text-anchor="end" font-size="22" fill="#5C5E62">35</text><line x1="70" x2="590" y1="90.0" y2="90.0" stroke="#D0D1D2" stroke-width="2"/><text x="58" y="99.0" text-anchor="end" font-size="22" fill="#5C5E62">40</text><line x1="70" x2="590" y1="30.0" y2="30.0" stroke="#D0D1D2" stroke-width="2"/><text x="58" y="39.0" text-anchor="end" font-size="22" fill="#5C5E62">45</text><text x="70.0" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">23&#x27;H1</text><text x="144.3" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">23&#x27;H2</text><text x="218.6" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">24&#x27;H1</text><text x="292.9" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">24&#x27;H2</text><text x="367.1" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">25&#x27;H1</text><text x="441.4" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">25&#x27;H2</text><text x="515.7" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">26&#x27;H1</text><text x="590.0" y="310" text-anchor="middle" font-size="22" fill="#5C5E62">26&#x27;H2</text><polyline class="a-line" points="70.0,133.5 144.3,155.5 218.6,155.0 292.9,146.5 367.1,146.5 441.4,125.5 515.7,155.0 590.0,112.0" fill="none" stroke="#3E6AE1" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle class="a-dot" cx="70.0" cy="133.5" r="8" fill="#3E6AE1"/><circle class="a-dot" cx="144.3" cy="155.5" r="8" fill="#3E6AE1"/><circle class="a-dot" cx="218.6" cy="155.0" r="8" fill="#3E6AE1"/><circle class="a-dot" cx="292.9" cy="146.5" r="8" fill="#3E6AE1"/><circle class="a-dot" cx="367.1" cy="146.5" r="8" fill="#3E6AE1"/><circle class="a-dot" cx="441.4" cy="125.5" r="8" fill="#3E6AE1"/><circle class="a-dot" cx="515.7" cy="155.0" r="8" fill="#3E6AE1"/><circle class="a-dot" cx="590.0" cy="112.0" r="8" fill="#3E6AE1"/><text x="608.0" y="121.0" font-size="26" font-weight="500" fill="#171A20">환산월세 38.2</text><polyline class="a-line" points="70.0,186.0 144.3,210.0 218.6,210.0 292.9,198.0 367.1,210.0 441.4,174.0 515.7,198.0 590.0,162.0" fill="none" stroke="#393C41" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><circle class="a-dot" cx="70.0" cy="186.0" r="8" fill="#393C41"/><circle class="a-dot" cx="144.3" cy="210.0" r="8" fill="#393C41"/><circle class="a-dot" cx="218.6" cy="210.0" r="8" fill="#393C41"/><circle class="a-dot" cx="292.9" cy="198.0" r="8" fill="#393C41"/><circle class="a-dot" cx="367.1" cy="210.0" r="8" fill="#393C41"/><circle class="a-dot" cx="441.4" cy="174.0" r="8" fill="#393C41"/><circle class="a-dot" cx="515.7" cy="198.0" r="8" fill="#393C41"/><circle class="a-dot" cx="590.0" cy="162.0" r="8" fill="#393C41"/><text x="608.0" y="171.0" font-size="26" font-weight="500" fill="#171A20">월세 34.0</text></svg></div>
       </div>
-      <p class="cap">호가가 실거래 대비: 부곡동 -14% · 온천동 -18% · 장전동 -7% (12~28㎡ 다세대·다가구 기준). 지번이 가려져 동 단위로만 비교해요.</p><div class="refs">[R-01] 국토교통부 전월세 실거래가</div></section>
-<section class="slide "><!-- 발표 메모: 통학 시간은 직선거리 기반 추정이므로 ODsay/수동 조회로 교체 예정. -->
-      <div class="kicker">결과 3 · 통학 vs 자취</div>
-      <h2 class="tight" data-edit>통학시간도 값으로 치면 영도·사하·강서부터 자취가 유리</h2>
+      <p class="cap rv" data-edit>호가 ÷ 실거래 − 1: 부곡동 -14% · 온천동 -18% · 장전동 -7% (12~28㎡ 다세대·다가구 기준). 지번이 가려져 동 단위로만 비교해요.</p><div class="refs">[R-01] 국토교통부 전월세 실거래가</div></section>
+<section class="slide "><!-- 발표 메모: 통학 시간은 직선거리 기반 추정이므로 ODsay/수동 조회로 교체 예정. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">결과 3</span></div>
+      <h2 class="tight rv" data-edit>통학시간도 값으로 치면 영도·사하·강서부터 자취가 유리</h2>
       <div class="side">
-        <div class="chart reveal"><svg viewBox="0 0 1260 748" width="1260" height="748" role="img"><text x="136" y="63" text-anchor="end" font-size="25" fill="var(--ink)">금정구</text><rect class="a-h" x="150.0" y="40" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="40" width="134.8" height="30" rx="5" fill="#eb6834"/><text x="387.6" y="63" font-size="23" font-weight="700" fill="var(--ink)">13만<tspan font-weight="400" fill="var(--ink2)"> · 14분</tspan></text><text x="136" y="106" text-anchor="end" font-size="25" fill="var(--ink)">동래구</text><rect class="a-h" x="150.0" y="83" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="83" width="177.3" height="30" rx="5" fill="#eb6834"/><text x="430.1" y="106" font-size="23" font-weight="700" fill="var(--ink)">15만<tspan font-weight="400" fill="var(--ink2)"> · 19분</tspan></text><text x="136" y="149" text-anchor="end" font-size="25" fill="var(--ink)">연제구</text><rect class="a-h" x="150.0" y="126" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="126" width="261.2" height="30" rx="5" fill="#eb6834"/><text x="514.0" y="149" font-size="23" font-weight="700" fill="var(--ink)">20만<tspan font-weight="400" fill="var(--ink2)"> · 28분</tspan></text><text x="136" y="192" text-anchor="end" font-size="25" fill="var(--ink)">북구</text><rect class="a-h" x="150.0" y="169" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="169" width="294.0" height="30" rx="5" fill="#eb6834"/><text x="546.8" y="192" font-size="23" font-weight="700" fill="var(--ink)">22만<tspan font-weight="400" fill="var(--ink2)"> · 31분</tspan></text><text x="136" y="235" text-anchor="end" font-size="25" fill="var(--ink)">부산진구</text><rect class="a-h" x="150.0" y="212" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="212" width="326.5" height="30" rx="5" fill="#eb6834"/><text x="579.3" y="235" font-size="23" font-weight="700" fill="var(--ink)">24만<tspan font-weight="400" fill="var(--ink2)"> · 34분</tspan></text><text x="136" y="278" text-anchor="end" font-size="25" fill="var(--ink)">수영구</text><rect class="a-h" x="150.0" y="255" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="255" width="328.6" height="30" rx="5" fill="#eb6834"/><text x="581.4" y="278" font-size="23" font-weight="700" fill="var(--ink)">24만<tspan font-weight="400" fill="var(--ink2)"> · 35분</tspan></text><text x="136" y="321" text-anchor="end" font-size="25" fill="var(--ink)">해운대구</text><rect class="a-h" x="150.0" y="298" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="298" width="350.4" height="30" rx="5" fill="#eb6834"/><text x="603.2" y="321" font-size="23" font-weight="700" fill="var(--ink)">25만<tspan font-weight="400" fill="var(--ink2)"> · 37분</tspan></text><text x="136" y="364" text-anchor="end" font-size="25" fill="var(--ink)">남구</text><rect class="a-h" x="150.0" y="341" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="341" width="396.7" height="30" rx="5" fill="#eb6834"/><text x="649.5" y="364" font-size="23" font-weight="700" fill="var(--ink)">28만<tspan font-weight="400" fill="var(--ink2)"> · 42분</tspan></text><text x="136" y="407" text-anchor="end" font-size="25" fill="var(--ink)">사상구</text><rect class="a-h" x="150.0" y="384" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="384" width="411.5" height="30" rx="5" fill="#eb6834"/><text x="664.3" y="407" font-size="23" font-weight="700" fill="var(--ink)">29만<tspan font-weight="400" fill="var(--ink2)"> · 43분</tspan></text><text x="136" y="450" text-anchor="end" font-size="25" fill="var(--ink)">동구</text><rect class="a-h" x="150.0" y="427" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="427" width="429.6" height="30" rx="5" fill="#eb6834"/><text x="682.4" y="450" font-size="23" font-weight="700" fill="var(--ink)">30만<tspan font-weight="400" fill="var(--ink2)"> · 45분</tspan></text><text x="136" y="493" text-anchor="end" font-size="25" fill="var(--ink)">기장군</text><rect class="a-h" x="150.0" y="470" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="470" width="459.7" height="30" rx="5" fill="#eb6834"/><text x="712.5" y="493" font-size="23" font-weight="700" fill="var(--ink)">32만<tspan font-weight="400" fill="var(--ink2)"> · 48분</tspan></text><text x="136" y="536" text-anchor="end" font-size="25" fill="var(--ink)">중구</text><rect class="a-h" x="150.0" y="513" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="513" width="504.4" height="30" rx="5" fill="#eb6834"/><text x="757.2" y="536" font-size="23" font-weight="700" fill="var(--ink)">34만<tspan font-weight="400" fill="var(--ink2)"> · 53분</tspan></text><text x="136" y="579" text-anchor="end" font-size="25" fill="var(--ink)">서구</text><rect class="a-h" x="150.0" y="556" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="556" width="522.0" height="30" rx="5" fill="#eb6834"/><text x="774.8" y="579" font-size="23" font-weight="700" fill="var(--ink)">35만<tspan font-weight="400" fill="var(--ink2)"> · 55분</tspan></text><text x="136" y="622" text-anchor="end" font-size="25" fill="var(--ink)">영도구</text><rect class="a-h" x="150.0" y="599" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="599" width="563.5" height="30" rx="5" fill="#eb6834"/><text x="816.3" y="622" font-size="23" font-weight="700" fill="var(--ink)">38만<tspan font-weight="400" fill="var(--ink2)"> · 59분</tspan></text><text x="136" y="665" text-anchor="end" font-size="25" fill="var(--ink)">사하구</text><rect class="a-h" x="150.0" y="642" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="642" width="579.5" height="30" rx="5" fill="#eb6834"/><text x="832.3" y="665" font-size="23" font-weight="700" fill="var(--ink)">39만<tspan font-weight="400" fill="var(--ink2)"> · 61분</tspan></text><text x="136" y="708" text-anchor="end" font-size="25" fill="var(--ink)">강서구</text><rect class="a-h" x="150.0" y="685" width="88.8" height="30" rx="5" fill="#2a78d6"/><rect class="a-h" x="240.8" y="685" width="677.1" height="30" rx="5" fill="#eb6834"/><text x="929.9" y="708" font-size="23" font-weight="700" fill="var(--ink)">44만<tspan font-weight="400" fill="var(--ink2)"> · 71분</tspan></text><line x1="798.2" x2="798.2" y1="30" y2="742" stroke="var(--ink)" stroke-width="3" stroke-dasharray="10 8"/><text x="808.2" y="24" font-size="23" font-weight="700" fill="var(--ink)">자취 37만원</text></svg></div>
-        <p class="cap"><i class="sq" style="background:#2a78d6"></i>교통비<br><i class="sq" style="background:#eb6834"></i>통학시간 환산<br>(시급 10,320원)<br><br>점선 = 정문 자취 월 주거비<br>월 16일 등교 기준<br><br>통학 시간은 <b>추정값</b>이에요.</p>
+        <div class="chart rv"><svg viewBox="0 0 1260 748" width="1260" height="748" role="img"><text x="134" y="62" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">금정구</text><rect class="a-h" x="150.0" y="40" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="40" width="134.8" height="28" rx="3" fill="#D0D1D2"/><text x="389.6" y="63" font-size="24" font-weight="500" fill="#171A20">13만<tspan font-weight="400" fill="#5C5E62"> · 14분</tspan></text><text x="134" y="105" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">동래구</text><rect class="a-h" x="150.0" y="83" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="83" width="177.3" height="28" rx="3" fill="#D0D1D2"/><text x="432.1" y="106" font-size="24" font-weight="500" fill="#171A20">15만<tspan font-weight="400" fill="#5C5E62"> · 19분</tspan></text><text x="134" y="148" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">연제구</text><rect class="a-h" x="150.0" y="126" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="126" width="261.2" height="28" rx="3" fill="#D0D1D2"/><text x="516.0" y="149" font-size="24" font-weight="500" fill="#171A20">20만<tspan font-weight="400" fill="#5C5E62"> · 28분</tspan></text><text x="134" y="191" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">북구</text><rect class="a-h" x="150.0" y="169" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="169" width="294.0" height="28" rx="3" fill="#D0D1D2"/><text x="548.8" y="192" font-size="24" font-weight="500" fill="#171A20">22만<tspan font-weight="400" fill="#5C5E62"> · 31분</tspan></text><text x="134" y="234" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">부산진구</text><rect class="a-h" x="150.0" y="212" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="212" width="326.5" height="28" rx="3" fill="#D0D1D2"/><text x="581.3" y="235" font-size="24" font-weight="500" fill="#171A20">24만<tspan font-weight="400" fill="#5C5E62"> · 34분</tspan></text><text x="134" y="277" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">수영구</text><rect class="a-h" x="150.0" y="255" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="255" width="328.6" height="28" rx="3" fill="#D0D1D2"/><text x="583.4" y="278" font-size="24" font-weight="500" fill="#171A20">24만<tspan font-weight="400" fill="#5C5E62"> · 35분</tspan></text><text x="134" y="320" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">해운대구</text><rect class="a-h" x="150.0" y="298" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="298" width="350.4" height="28" rx="3" fill="#D0D1D2"/><text x="605.2" y="321" font-size="24" font-weight="500" fill="#171A20">25만<tspan font-weight="400" fill="#5C5E62"> · 37분</tspan></text><text x="134" y="363" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">남구</text><rect class="a-h" x="150.0" y="341" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="341" width="396.7" height="28" rx="3" fill="#D0D1D2"/><text x="651.5" y="364" font-size="24" font-weight="500" fill="#171A20">28만<tspan font-weight="400" fill="#5C5E62"> · 42분</tspan></text><text x="134" y="406" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">사상구</text><rect class="a-h" x="150.0" y="384" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="384" width="411.5" height="28" rx="3" fill="#D0D1D2"/><text x="666.3" y="407" font-size="24" font-weight="500" fill="#171A20">29만<tspan font-weight="400" fill="#5C5E62"> · 43분</tspan></text><text x="134" y="449" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">동구</text><rect class="a-h" x="150.0" y="427" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="427" width="429.6" height="28" rx="3" fill="#D0D1D2"/><text x="684.4" y="450" font-size="24" font-weight="500" fill="#171A20">30만<tspan font-weight="400" fill="#5C5E62"> · 45분</tspan></text><text x="134" y="492" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">기장군</text><rect class="a-h" x="150.0" y="470" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="470" width="459.7" height="28" rx="3" fill="#D0D1D2"/><text x="714.5" y="493" font-size="24" font-weight="500" fill="#171A20">32만<tspan font-weight="400" fill="#5C5E62"> · 48분</tspan></text><text x="134" y="535" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">중구</text><rect class="a-h" x="150.0" y="513" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="513" width="504.4" height="28" rx="3" fill="#D0D1D2"/><text x="759.2" y="536" font-size="24" font-weight="500" fill="#171A20">34만<tspan font-weight="400" fill="#5C5E62"> · 53분</tspan></text><text x="134" y="578" text-anchor="end" font-size="26" font-weight="400" fill="#171A20">서구</text><rect class="a-h" x="150.0" y="556" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="556" width="522.0" height="28" rx="3" fill="#D0D1D2"/><text x="776.8" y="579" font-size="24" font-weight="500" fill="#171A20">35만<tspan font-weight="400" fill="#5C5E62"> · 55분</tspan></text><text x="134" y="621" text-anchor="end" font-size="26" font-weight="500" fill="#171A20">영도구</text><rect class="a-h" x="150.0" y="599" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="599" width="563.5" height="28" rx="3" fill="#3E6AE1"/><text x="818.3" y="622" font-size="24" font-weight="500" fill="#171A20">38만<tspan font-weight="400" fill="#5C5E62"> · 59분</tspan></text><text x="134" y="664" text-anchor="end" font-size="26" font-weight="500" fill="#171A20">사하구</text><rect class="a-h" x="150.0" y="642" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="642" width="579.5" height="28" rx="3" fill="#3E6AE1"/><text x="834.3" y="665" font-size="24" font-weight="500" fill="#171A20">39만<tspan font-weight="400" fill="#5C5E62"> · 61분</tspan></text><text x="134" y="707" text-anchor="end" font-size="26" font-weight="500" fill="#171A20">강서구</text><rect class="a-h" x="150.0" y="685" width="88.8" height="28" rx="3" fill="#171A20"/><rect class="a-h" x="240.8" y="685" width="677.1" height="28" rx="3" fill="#3E6AE1"/><text x="931.9" y="708" font-size="24" font-weight="500" fill="#171A20">44만<tspan font-weight="400" fill="#5C5E62"> · 71분</tspan></text><line x1="798.2" x2="798.2" y1="30" y2="742" stroke="#171A20" stroke-width="3" stroke-dasharray="10 8"/><text x="808.2" y="24" font-size="24" font-weight="500" fill="#171A20">자취 37만원</text></svg></div>
+        <div class="legendcol rv"><p><i class="sq" style="background:#171A20"></i>교통비</p><p><i class="sq" style="background:#D0D1D2"></i>통학시간 환산<br><span class="mut">시급 10,320원 · 자취가 유리한 구는 <b>파랑</b></span></p>
+        <p class="mut">점선 = 정문 자취 월 주거비<br>월 16일 등교 기준<br><br>통학 시간은 <b>추정값</b>이에요.</p></div>
       </div><div class="refs">[R-04] 대중교통 요금 · [R-05] 최저임금</div></section>
-<section class="slide dark"><!-- 발표 메모: 식비·생활비 증가는 자취 쪽 비용에 포함되지 않았다고 반드시 언급. -->
-      <div class="kicker">결과 3 · 손익분기</div>
-      <h2 data-edit>편도 약 <em>59분</em>이 넘으면 자취가 이득</h2>
-      <div class="three">
-        <div class="tile reveal"><div class="big">81<small>분</small></div><p>월 12일 등교</p></div><div class="tile reveal"><div class="big">59<small>분</small></div><p>월 16일 등교</p></div><div class="tile reveal"><div class="big">45<small>분</small></div><p>월 20일 등교</p></div>
-      </div>
-      <p class="cap" style="max-width:1500px">현금 교통비만 보면 모든 구에서 통학이 저렴합니다. 결국 갈림길은 돈이 아니라 <b>통학 시간을 얼마로 보느냐</b>입니다.</p><div class="refs">[R-04] · [R-05]</div></section>
-<section class="slide ">
-      <div class="kicker">한계</div>
-      <h2 data-edit>해석할 때 기억할 다섯 가지</h2>
+<section class="slide hero be dark"><!-- 발표 메모: 식비·생활비 증가는 자취 쪽 비용에 포함되지 않았다고 반드시 언급. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">결과 3</span></div>
+      <div class="bgbox"><img class="bg" src="assets/img/10_hero_commute.jpg" alt="아침 통학 지하철 승강장" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/10_hero_commute.jpg</span></div>
+      <div class="herotxt mid">
+        <h2 class="rv" data-edit>편도 약 59분이 넘으면 자취가 이득</h2>
+        <div class="trio rv"><div><div class="big">81<small>분</small></div><div class="cap1">월 12일 등교</div></div><div><div class="big">59<small>분</small></div><div class="cap1">월 16일 등교</div></div><div><div class="big">45<small>분</small></div><div class="cap1">월 20일 등교</div></div></div>
+        <p class="sub rv" data-edit>현금 교통비만 보면 모든 구에서 통학이 저렴해요.<br>갈림길은 돈이 아니라 통학 시간을 얼마로 보느냐예요.</p>
+      </div><div class="refs">[R-04] · [R-05]</div></section>
+<section class="slide "><div class="nav"><span class="wm">PNU RENT</span><span class="sec">한계</span></div>
+      <h2 class="rv" data-edit>해석할 때 기억할 다섯 가지</h2>
       <ol class="lim">
-        <li class="reveal" data-edit>호가는 요청 가격의 한 시점 스냅샷이며, 크롤링 약관 확인이 필요합니다.</li>
-        <li class="reveal" data-edit>다방 좌표는 가려져 있고, 정문·북문 앵커는 검증하지 못했습니다.</li>
-        <li class="reveal" data-edit>실거래는 동 중심 좌표만 써서 동 안의 위치 차이는 보지 못합니다.</li>
-        <li class="reveal" data-edit>보증금 환산 이율과 통학 시간·요금은 가정(추정)입니다.</li>
-        <li class="reveal" data-edit>자취의 식비·생활비와 통학의 피로는 포함하지 않았습니다.</li>
+        <li class="rv" data-edit>호가는 요청 가격의 한 시점 스냅샷이고, 크롤링 약관 확인이 필요해요.</li>
+        <li class="rv" data-edit>다방 좌표는 가려져 있고, 정문·북문 앵커는 검증하지 못했어요.</li>
+        <li class="rv" data-edit>실거래는 동 중심 좌표만 써서 동 안의 위치 차이는 보지 못해요.</li>
+        <li class="rv" data-edit>보증금 환산 이율과 통학 시간·요금은 가정(추정)이에요.</li>
+        <li class="rv" data-edit>자취의 식비·생활비와 통학의 피로는 포함하지 않았어요.</li>
       </ol></section>
-<section class="slide cover">
-      <div class="kicker reveal">결론</div>
-      <h2 class="reveal big2" data-edit>정문이 가장 싸지만, 차이보다 중요한 건 <em>방 크기와 통학 시간</em></h2>
-      <ul class="concl">
-        <li class="reveal" data-edit>권역 간 월 주거비 격차는 최대 5.4만원</li>
-        <li class="reveal" data-edit>현금만 보면 통학이 싸고, 편도 59분을 넘으면 자취가 이득</li>
-        <li class="reveal" data-edit>12~28㎡ 다세대·다가구로 맞춰 보면 호가가 실거래보다 평균 13% 낮아요</li>
-      </ul><div class="blob b1"></div></section>
-<section class="slide ">
-      <div class="kicker">참고문헌</div>
+<section class="slide hero end dark"><div class="nav"><span class="wm">PNU RENT</span><span class="sec">결론</span></div>
+      <div class="bgbox"><img class="bg" src="assets/img/12_hero_home.jpg" alt="아침 햇살이 드는 원룸 창가" loading="lazy" onerror="this.parentNode.classList.add('noimg');this.remove()"><span class="slot">assets/img/12_hero_home.jpg</span></div>
+      <div class="herotxt mid">
+        <h2 class="rv" data-edit>정문이 가장 싸지만,<br>차이보다 중요한 건 방 크기와 통학 시간</h2>
+        <ul class="concl">
+          <li class="rv" data-edit>권역 간 월 주거비 격차는 최대 5.4만원</li>
+          <li class="rv" data-edit>현금만 보면 통학이 싸고, 편도 59분을 넘으면 자취가 이득</li>
+          <li class="rv" data-edit>12~28㎡ 다세대·다가구로 맞추면 호가가 실거래보다 평균 13% 낮아요</li>
+        </ul>
+      </div></section>
+<section class="slide "><div class="nav"><span class="wm">PNU RENT</span><span class="sec">부록</span></div>
+      <div class="tag">부록</div>
+      <h2 class="rv" data-edit>학교와 가깝다고 꼭 비싸진 않았어요</h2>
+      <div class="chart rv"><svg viewBox="0 0 1100 520" width="1100" height="520" role="img"><line x1="20" x2="1100" y1="424" y2="424" stroke="#D0D1D2" stroke-width="2"/><rect class="a-v" x="74.0" y="172.9" width="108.0" height="251.1" rx="4" fill="#D0D1D2"/><text x="128.0" y="158.9" text-anchor="middle" font-size="30" font-weight="500" fill="#171A20">41.8만</text><text x="128.0" y="462" text-anchor="middle" font-size="28" fill="#171A20">~300m</text><text x="128.0" y="496" text-anchor="middle" font-size="24" fill="#5C5E62">n=70</text><rect class="a-v" x="290.0" y="193.7" width="108.0" height="230.3" rx="4" fill="#D0D1D2"/><text x="344.0" y="179.7" text-anchor="middle" font-size="30" font-weight="500" fill="#171A20">38.4만</text><text x="344.0" y="462" text-anchor="middle" font-size="28" fill="#171A20">300~600m</text><text x="344.0" y="496" text-anchor="middle" font-size="24" fill="#5C5E62">n=155</text><rect class="a-v" x="506.0" y="116.8" width="108.0" height="307.2" rx="4" fill="#3E6AE1"/><text x="560.0" y="102.8" text-anchor="middle" font-size="30" font-weight="500" fill="#171A20">51.2만</text><text x="560.0" y="462" text-anchor="middle" font-size="28" fill="#171A20">600~900m</text><text x="560.0" y="496" text-anchor="middle" font-size="24" fill="#5C5E62">n=30</text><rect class="a-v" x="722.0" y="175.6" width="108.0" height="248.4" rx="4" fill="#D0D1D2"/><text x="776.0" y="161.6" text-anchor="middle" font-size="30" font-weight="500" fill="#171A20">41.4만</text><text x="776.0" y="462" text-anchor="middle" font-size="28" fill="#171A20">900~1200m</text><text x="776.0" y="496" text-anchor="middle" font-size="24" fill="#5C5E62">n=29</text><rect class="a-v" x="938.0" y="205.7" width="108.0" height="218.3" rx="4" fill="#D0D1D2"/><text x="992.0" y="191.7" text-anchor="middle" font-size="30" font-weight="500" fill="#171A20">36.4만</text><text x="992.0" y="462" text-anchor="middle" font-size="28" fill="#171A20">1200m+</text><text x="992.0" y="496" text-anchor="middle" font-size="24" fill="#5C5E62">n=72</text></svg></div>
+      <p class="cap rv">앵커까지 거리별 월 실질 주거비 중위값. Spearman ρ = -0.05 (p = 0.33).</p><div class="refs">[R-01] 매물 호가</div></section>
+<section class="slide "><!-- 발표 메모: 표본이 작아 호가 모델은 참고용. --><div class="nav"><span class="wm">PNU RENT</span><span class="sec">부록</span></div>
+      <div class="tag">부록</div>
+      <h2 class="rv" data-edit>단순 중위값 대비 오차를 31% 줄였어요</h2>
+      <div class="cols2">
+        <div class="rv"><div class="big">5.6<small>만원 MAE</small></div><div class="cap1">호가 모델 (HistGB, 반복 CV)</div><p class="note">전체 중위값 8.1만원. 가장 큰 변수는 <b>area_m2</b>.</p></div>
+        <div class="rv"><div class="big">6.3<small>만원 MAE</small></div><div class="cap1">실거래 모델 (시간분할 테스트)</div><p class="note">동 중위값 9.0만원.</p></div>
+      </div><div class="refs">HistGradientBoosting · 반복 5-fold CV / 시간분할</div></section>
+<section class="slide "><div class="nav"><span class="wm">PNU RENT</span><span class="sec">출처</span></div>
+      <div class="tag">부록</div>
       <h2 data-edit>출처</h2>
       <ul class="src">
         <li>[R-01] 국토교통부 전월세 실거래가, 공공데이터포털 (data.go.kr)</li>
@@ -312,32 +344,26 @@ body.editing .edit-hint{display:block}
         <li>[R-04] 부산 대중교통 요금 (공식 고시 확인 필요)</li>
         <li>[R-05] 2026년 최저임금 10,320원/시간 (고용노동부)</li>
         <li>다방 · 직방 · 피터팬의 좋은방 구하기 매물 (수집 스냅샷)</li>
-        <li>[R-06]~[R-10] 2026 프레젠테이션 디자인 트렌드 (디자인 벤치마크)</li>
+        <li>디자인: Tesla 스타일 디자인 시스템 (getdesign) · 이미지: AI 생성</li>
       </ul></section>
-<section class="slide "><!-- 발표 메모: 표본이 작아 호가 모델은 참고용. -->
-      <div class="kicker">부록 · 예측 모델</div>
-      <h2 data-edit>단순 중위값 대비 오차를 31% 줄였습니다</h2>
-      <div class="two small">
-        <div class="tile reveal"><div class="big">5.6<small>만원 MAE</small></div><p>호가 모델(HistGB, 반복 CV). 전체 중위값 8.1만원. 가장 큰 변수: <b>area_m2</b>.</p></div>
-        <div class="tile reveal"><div class="big">6.3<small>만원 MAE</small></div><p>실거래 모델(시간분할 테스트). 동 중위값 9.0만원.</p></div>
-      </div><div class="refs">HistGradientBoosting · 반복 5-fold CV / 시간분할</div></section>
 </main>
 </div>
-<div class="deck-controls" aria-label="슬라이드 이동"><button id="prev" aria-label="이전">◀</button><span id="pg"></span><button id="next" aria-label="다음">▶</button></div>
-<div class="edit-hint">편집 모드 · Ctrl+S 저장 · E 종료</div>
+<button class="arrow l" id="prev" aria-label="이전">&#8249;</button><button class="arrow r" id="next" aria-label="다음">&#8250;</button>
+<div class="dots" id="dots" aria-label="슬라이드 이동"></div>
+<div class="edit-hint">편집 모드 · Ctrl+S 저장 · Esc 종료</div>
 <script>
-/* === 슬라이드 컨트롤러: 방향키/스페이스/스와이프, E = 인라인 편집 === */
+/* === 슬라이드 컨트롤러: 방향키/스페이스/스와이프/점, E = 인라인 편집 === */
 
 (function(){
-  const slides=[...document.querySelectorAll('.slide')], stage=document.getElementById('deckStage');
+  const slides=[...document.querySelectorAll('.slide')], stage=document.getElementById('deckStage'), dots=document.getElementById('dots');
+  slides.forEach((s,k)=>{const d=document.createElement('i');d.onclick=()=>show(k);d.title=(k+1)+'';dots.append(d);});
   let cur=0;
   function fit(){const f=Math.min(innerWidth/1920,innerHeight/1080);stage.style.transform=`translate(${(innerWidth-1920*f)/2}px,${(innerHeight-1080*f)/2}px) scale(${f})`;}
   var show=function(i){cur=Math.max(0,Math.min(i,slides.length-1));slides.forEach((s,k)=>{s.classList.toggle('active',k===cur);s.classList.toggle('visible',k===cur);});
-    document.getElementById('pg').textContent=(cur+1)+' / '+slides.length;stage.style.setProperty('--slide-bg',getComputedStyle(slides[cur]).getPropertyValue('--slide-bg'));
-    stage.style.background=getComputedStyle(slides[cur]).backgroundColor; history.replaceState(null,'','#'+(cur+1));};
+    [...dots.children].forEach((d,k)=>d.classList.toggle('on',k===cur));history.replaceState(null,'','#'+(cur+1));};
   addEventListener('resize',fit);fit();
   document.addEventListener('keydown',e=>{
-    if(document.body.classList.contains('editing')&&e.key!=='Escape'&&!(e.key==='e'&&e.ctrlKey)){ if(e.key==='s'&&e.ctrlKey){e.preventDefault();save();} return; }
+    if(document.body.classList.contains('editing')){ if(e.key==='Escape'){toggleEdit();} else if(e.key==='s'&&e.ctrlKey){e.preventDefault();save();} return; }
     if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();show(cur+1);}
     else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();show(cur-1);}
     else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);
@@ -348,16 +374,16 @@ body.editing .edit-hint{display:block}
   addEventListener('touchend',e=>{if(tx==null)return;const dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));tx=null;});
   function toggleEdit(){const on=document.body.classList.toggle('editing');document.querySelectorAll('[data-edit]').forEach(n=>n.contentEditable=on);}
   function save(){const doc='<!DOCTYPE html>\n'+document.documentElement.outerHTML;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([doc],{type:'text/html'}));a.download='slides-edited.html';a.click();}
-  /* === anime.js 모션: 슬라이드가 보일 때마다 막대·선·숫자가 움직임 (anime.js 로드 실패 시 정적으로 표시) === */
+  /* === anime.js: 데이터가 나타나는 순간만 움직임 (로드 실패/감소된 모션이면 정적) === */
   function motion(s){
     if(!window.anime||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    s.querySelectorAll('.a-h').length&&anime({targets:s.querySelectorAll('.a-h'),scaleX:[0,1],delay:anime.stagger(110,{start:250}),duration:1100,easing:'easeOutExpo'});
-    s.querySelectorAll('.a-v').length&&anime({targets:s.querySelectorAll('.a-v'),scaleY:[0,1],delay:anime.stagger(130,{start:250}),duration:1100,easing:'easeOutBack'});
-    s.querySelectorAll('.a-line').forEach((l,k)=>{const L=l.getTotalLength();l.style.strokeDasharray=L;anime({targets:l,strokeDashoffset:[L,0],duration:1600,delay:300+k*250,easing:'easeInOutCubic'});});
-    s.querySelectorAll('.a-dot').length&&anime({targets:s.querySelectorAll('.a-dot'),scale:[0,1],delay:anime.stagger(90,{start:900}),duration:600,easing:'easeOutBack'});
+    s.querySelectorAll('.a-h').length&&anime({targets:s.querySelectorAll('.a-h'),scaleX:[0,1],delay:anime.stagger(100,{start:250}),duration:1000,easing:'easeOutExpo'});
+    s.querySelectorAll('.a-v').length&&anime({targets:s.querySelectorAll('.a-v'),scaleY:[0,1],delay:anime.stagger(120,{start:250}),duration:1000,easing:'easeOutExpo'});
+    s.querySelectorAll('.a-line').forEach((l,k)=>{const L=l.getTotalLength();l.style.strokeDasharray=L;anime({targets:l,strokeDashoffset:[L,0],duration:1500,delay:300+k*250,easing:'easeInOutCubic'});});
+    s.querySelectorAll('.a-dot').length&&anime({targets:s.querySelectorAll('.a-dot'),opacity:[0,1],delay:anime.stagger(90,{start:900}),duration:400,easing:'linear'});
     s.querySelectorAll('.big').forEach(el=>{const n=[...el.childNodes].find(c=>c.nodeType===3&&/[0-9]/.test(c.textContent));if(!n)return;
       const raw=n.textContent.trim(),to=parseFloat(raw.replace(/[^0-9.+-]/g,'')),dec=(raw.split('.')[1]||'').length,sign=raw[0]==='+'?'+':'';
-      if(isNaN(to))return;const o={v:0};anime({targets:o,v:to,duration:1400,delay:250,easing:'easeOutExpo',update(){n.textContent=sign+(dec?o.v.toFixed(dec):Math.round(o.v).toLocaleString());}});});
+      if(isNaN(to))return;const o={v:0};anime({targets:o,v:to,duration:1300,delay:250,easing:'easeOutExpo',update(){n.textContent=sign+(dec?o.v.toFixed(dec):Math.round(o.v).toLocaleString());}});});
   }
   const _show=show; show=function(i){_show(i);motion(slides[cur]);};
   const h=parseInt(location.hash.slice(1));show(isNaN(h)?0:h-1);
